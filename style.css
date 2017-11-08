@@ -1,0 +1,39 @@
+body{
+    font-family: cursive;
+}
+
+.chatWindow{
+    height: 500px;
+    width: 575px;
+    border-style: solid;
+}
+
+.userNameInput{
+    width: 481px;
+    border: 1px solid black;
+    height: 20px;
+    margin: 2px;
+    margin-left: 20px;
+}
+
+.messageInput{
+    width: 480px;
+    border: 1px solid black;
+    height: 60px;
+    margin: 2px;
+}
+
+.userName{
+    
+}
+
+.message{
+    
+}
+
+#button{
+width: 580px;
+height: 25px;
+font-family: cursive;
+font-weight: bold;
+}
