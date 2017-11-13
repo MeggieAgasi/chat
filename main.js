@@ -3,9 +3,9 @@
 var userNameInput = $(".userNameInput");
 var messageInput = $(".messageInput");
 var MessagesWindow = $(".ulMessages");
-var ObjliOpen = $('<li>');
-var ObjliClose = $('</li>');
-var messageprint= $('');
+var ObjliOpen = "<li class=\"msgTxt\">";
+var ObjliClose = "</li>";
+var messageprint= "";
 
 var apiBaseUrl = 'https://hidden-headland-7200.herokuapp.com';
 var addMessageUrl = apiBaseUrl + '/new';
@@ -21,13 +21,14 @@ fetch(addMessageUrl, {
 fetch(`https://hidden-headland-7200.herokuapp.com`)
 .then(res=>res.json())
 .then((allMessages) => {
+	$( ".ulMessages" ).remove(".msgTxt");
 
 for (var i = 0; i < allMessages.length; i++) {
     var messages = allMessages[i];
     messageprint = messages.name +": " +messages.message;
 
     console.log(messageprint);
-    MessagesWindow.append((ObjliOpen+ messageprint +ObjliClose));
+    $( ".ulMessages" ).append(ObjliOpen + messageprint + ObjliClose);
 
         }
 

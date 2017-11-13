@@ -6,6 +6,7 @@ body{
     height: 500px;
     width: 575px;
     border-style: solid;
+    overflow: auto;
 }
 
 .userNameInput{
